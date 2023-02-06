@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular';
+  collector={
+    Firstname:"Amar",
+    Lastname:"Nath"
+  }
+  googleAssit(){
+    alert("Hi my Friend")
+  }
 }
