@@ -1,0 +1,13 @@
+<hr>
+<h1>Directives Works!</h1>
+<p>NgStyle , NgClass,NgModel</p>
+
+<p [ngStyle]="{'color':'tomato','font-size':'30px'}">
+  Hi Friends , I am directive of the Angular.io
+</p>
+
+<div>
+  <div *ngFor="let member of user" [ngClass]="{'test':member.userName === 'Amar'}">
+    {{member.userName}}
+  </div>
+</div>

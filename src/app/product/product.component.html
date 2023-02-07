@@ -1,4 +1,5 @@
-<h1>Products category</h1>
+<hr>
+<u><h1>Products category</h1></u>
 <div *ngFor="let product of products">
   <!-- <h3>{{product.name}}</h3>
   <h4>{{product.price}}</h4> -->
@@ -14,4 +15,22 @@
   </p>
   <button type="button" (click)="share()">Share</button><pre></pre>
   <button type="button" (click)="notifyMe()">Notify</button>
+</div><hr>
+
+
+<hr>
+<strong><u><p>Example for ngIf condition : </p></u></strong>
+<button type="button" (click)="onEditAble()">EDIT</button>
+
+<div *ngIf="canEdit;  else noEdit">
+  <p>The following paragraph is now editable </p>
 </div>
+
+<ng-template #noEdit>
+  <p>Now the paragraph is only readable!!!</p>
+</ng-template>
+<p [contentEditable]="canEdit">{{message}}</p>
+
+<hr>
+<br>
+

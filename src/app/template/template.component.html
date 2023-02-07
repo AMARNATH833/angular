@@ -1,0 +1,60 @@
+<h1>Hello Template </h1>
+
+<!-- Example of Loopback from the template -->
+<u><p>LoopBack :</p></u>
+<input #box (keyup)="0">
+<p>{{box.value}}</p>
+<pre></pre>
+
+<!-- Example for Inout from event object from the input key entered -->
+<u><p>Get user input from $event Object</p></u>
+<input (keyup)="onPress($event)">
+<p>{{values}}</p>
+<pre></pre>
+<u><p>Keyup displying value after entering "EnterKEY" : </p></u>
+<input #input (keyup.enter)="enter(input.value)" (blur)="enter(input.value)">
+<p>{{mobile}}</p> 
+
+<!-- Example of Event Binding -->
+<u><p>Event Binding: </p></u>
+<button (click)="showData($event)">Press Here</button> 
+<pre></pre>
+
+<!-- Exmaple of Property Binding -->
+<u><p>Property Binding</p></u>
+<input type="text" [value]="word">
+<pre></pre>
+
+<!-- Example of Class Binding -->
+<u><p>Class Binding : </p></u>
+<p [class]="name">Hello Amarnath , we are learning Angular.io</p>
+<p [class]="applyColor"> And We are going nearer to the goals!!!</p>
+<pre></pre>
+
+<!-- Example of style Binding -->
+<p [style.color]="favColor">We are Currently at Style binding</p>
+<pre></pre>
+
+<!-- Example of Two way Binding` -->
+<!-- <label>FIRSTNAME :</label>
+<input [value]="FirstName" type="text" (input)='FirstName=$event.target.value'><br>
+<label>LASTNAME :</label>
+<input [value]="LastName" type="text" (input)="LastName=$event.target.value"><br>
+<h3>{{FullName()}}</h3> -->
+
+<!-- Example of Pipe -->
+<u><p>Date Pipe :</p></u>
+Today's Date:{{todayDate}}<br>
+Date Pipe with Upper Case: {{todayDate|uppercase}}<br>
+Date Pipe with Lower Case: {{todayDate|lowercase}}<br>
+Date Pipe with date pipe :{{todayDate|date:'medium'}}<br>
+Name:{{DataName}}<br>
+Name with slice :{{DataName|slice:5}}<br>
+<p>Currency Pipe :</p>
+Currency Pipe:{{Money|currency:'JPY'}}<br>
+Currency Pipe with symbol:{{Money|currency:'INR':'symbol'}}<br>
+Percentage:{{percent|percent}}<br>
+Percentage with Format '3.1-5':{{percent|percent:'3.1-5'}}<br>
+Decimal pipe:{{decimal|number}}<br>
+Decimal pipe with conditions :{{decimal|number:'4.3-5':'fr'}}<br>
+Decimal pipe with Rounding number  {{decimal}} to their Nearest:{{decimal|number:'1.1-1'}}<br>

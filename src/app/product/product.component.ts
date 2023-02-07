@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent{
 
+  message="Hello , this is Amar! Lets be friends!";
+  canEdit=false;
+  noEdit:null | undefined;
+
   products=[{
     name:"Ipphone",
     price:60000,
@@ -18,11 +22,22 @@ export class ProductComponent{
     describe:"THis is the best Andriod phone which is existing in the planet."
   }
 ]
+
   share(){
     // console.log("Thankyou for sharing this item")
     alert("Thankyou for sharing this item")
   }
   notifyMe(){
     alert("We will get notified you when product in the stock")
+  }
+
+  onEditAble(){
+    this.canEdit=!this.canEdit;
+    if(this.canEdit){
+      this.message="Yes , you can edit!";
+    }
+    else{
+      this.message="Sorry , Now it is only readable";
+    }
   }
 }
