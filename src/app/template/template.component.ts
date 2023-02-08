@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { CalenderService } from '../calender.service';
 
 @Component({
   selector: 'app-template',
@@ -20,6 +21,7 @@ export class TemplateComponent{
   percent:number=0.99;
   decimal:number=1.25456789;
 
+  constructor(private calender:CalenderService){  }
 
   onPress(event:any){
     this.values+=event.target.value+'|';
@@ -44,4 +46,5 @@ export class TemplateComponent{
     this.todayDate=new Date().toDateString();
     this.DataName="VivoV20 SMARTPHONE";
   }
+
 }

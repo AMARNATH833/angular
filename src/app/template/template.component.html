@@ -6,7 +6,7 @@
 <p>{{box.value}}</p>
 <pre></pre>
 
-<!-- Example for Inout from event object from the input key entered -->
+<!-- Example for Input from event object from the input key entered -->
 <u><p>Get user input from $event Object</p></u>
 <input (keyup)="onPress($event)">
 <p>{{values}}</p>
@@ -56,5 +56,6 @@ Currency Pipe with symbol:{{Money|currency:'INR':'symbol'}}<br>
 Percentage:{{percent|percent}}<br>
 Percentage with Format '3.1-5':{{percent|percent:'3.1-5'}}<br>
 Decimal pipe:{{decimal|number}}<br>
-Decimal pipe with conditions :{{decimal|number:'4.3-5':'fr'}}<br>
+Decimal pipe with conditions :{{decimal|number:'4.3-5'}}<br>
 Decimal pipe with Rounding number  {{decimal}} to their Nearest:{{decimal|number:'1.1-1'}}<br>
+<br>

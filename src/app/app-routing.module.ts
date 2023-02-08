@@ -1,7 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArtistComponent } from './artist/artist.component';
+import { MusicComposerComponent } from './artist/musicComposer/musicComposer.component';
+import { SingerComponent } from './artist/singer/singer.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { ErrorComponent } from './error/error.component';
+import { ProductComponent } from './product/product.component';
+import { TemplateComponent } from './template/template.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'directives',title:'Directives',component:DirectivesComponent},
+  {path:'product',title:'Product',component:ProductComponent},
+  {path:'template',title:'Template',component:TemplateComponent},
+  {
+    path:'artist',title:'Artist',component:ArtistComponent,
+    children:[
+      {path:'singer',title:'Singer',component:SingerComponent},
+      {path:'musiccomposer',title:'MusicComposer',component:MusicComposerComponent}
+    ]
+  },
+  {path:'',redirectTo:'directives',pathMatch:'full'},
+  {path:'**',title:'PAGENOTFOUND',component:ErrorComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

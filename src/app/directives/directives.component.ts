@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalenderService } from '../calender.service';
 import { User } from '../user';
 
 @Component({
@@ -7,6 +8,9 @@ import { User } from '../user';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent{
+message: any;
+
+  constructor(private calender:CalenderService){}
 
   user:User[]=[
     {
@@ -18,4 +22,12 @@ export class DirectivesComponent{
       "userName":'Mugesh'
     }
   ]
+
+  day(){
+    this.calender.todayDay();
+    // alert(this.calender.todayDay())
+  }
+  log(message:any){
+    this.calender.log('Hello ');
+  }
 }
