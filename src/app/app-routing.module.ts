@@ -19,6 +19,18 @@ const routes: Routes = [
       {path:'musiccomposer',title:'MusicComposer',component:MusicComposerComponent}
     ]
   },
+  {
+    path:'oneroute',
+    loadChildren:()=>import('../app/oneRoute/oneRoute-routing.module').then(x=>x.oneRouteModule)
+  },
+  {
+    path:'tworoute',
+    loadChildren:()=>import('../app/twoRoute/twoRoute-routing.module').then(x=>x.twoRouteModule)
+  },
+  {
+    path:'threeroute',
+    loadChildren:()=>import('../app/threeRoute/threeRoute-routing.module').then(x=>x.threeRouteModule)
+  },
   {path:'',redirectTo:'directives',pathMatch:'full'},
   {path:'**',title:'PAGENOTFOUND',component:ErrorComponent}
 ];
