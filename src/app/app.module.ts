@@ -13,9 +13,11 @@ import { TwoRouteComponent } from './twoRoute/twoRoute.component';
 import { ThreeRouteComponent } from './threeRoute/threeRoute.component';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TemplateDrivenFormComponent } from './templateDrivenForm/templateDrivenForm.component';
+import { JsonserverComponent } from './jsonserver/jsonserver.component';
 
 @NgModule({
-  declarations: [									
+  declarations: [											
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -25,7 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       OneRouteComponent,
       TwoRouteComponent,
       ThreeRouteComponent,
-      FormsComponent
+      FormsComponent,
+      TemplateDrivenFormComponent,
+      JsonserverComponent
    ],
   imports: [
     BrowserModule,

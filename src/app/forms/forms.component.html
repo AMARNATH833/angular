@@ -1,13 +1,45 @@
-<!-- <h1>Forms</h1>
-<p>Example of Forms :) </p>
-<label>Enter your name: &nbsp;</label>
-<input type="text" placeholder="Enter your Name :)"><br><br>
-<label>Enter your password: &nbsp;</label>
-<input type="password" placeholder="Enter your password :("><br>
-<hr> -->
+<form [formGroup]="FormDemo">
+  <h1>Reactive Forms Example</h1>
 
-<div>
-  <form [formGroup]='signupForm' (NgSubmit)="postData(signupForm)">
+  <div class="name">
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="submitted&&form['name'].errors">
+      <p *ngIf="form['name'].errors['required']">Please enter  UserName:</p>
+      <p *ngIf="form['name'].errors['name']">Please enter valid UserName:</p>
+    </div>
+  </div><br>
 
-  </form>
-</div>
+  <div class="mail">
+    <label>Emailid:</label>
+    <input type="email" formControlName="mail">
+    <div *ngIf="submitted&&form['mail'].errors">
+      <p *ngIf="form['mail'].errors['required']">please enter mailID</p>
+      <p *ngIf="form['mail'].errors['mail']">Please enter valid mailID</p>
+    </div>
+  </div><br>
+  
+  <div class="password">
+    <label>Password:</label>
+    <input type="password" formControlName="password">
+    <div *ngIf="submitted&&form['password'].errors">
+      <p *ngIf="form['password'].errors['required']">please enter Password</p>
+      <p *ngIf="form['password'].errors['password']">Please enter valid Password</p>
+    </div>
+  </div><br>
+
+  <div class="cpass">
+    <label>Conform Password:</label>
+    <input type="password" formControlName="cpassword">
+    <div *ngIf="submitted&&form['cpassword'].errors">
+      <p *ngIf="form['cpassword'].errors['required']">please enter Conform Password</p>
+      <p *ngIf="form['cpassword'].errors['cpassword']">Please enter valid Conform Password</p>
+    </div>
+  </div><br>
+
+  <button type="button" class="button" (click)="submitForm()">SUBMIT</button>
+  
+  <p>Form Status : {{FormDemo.status}}</p><br>
+  <p>Form Values : {{FormDemo.value|json}}</p>
+  
+</form>
