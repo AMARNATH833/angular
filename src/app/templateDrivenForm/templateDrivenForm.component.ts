@@ -12,7 +12,7 @@ export class TemplateDrivenFormComponent implements OnInit {
   ngOnInit() {
   }
   
-  submitForm(){
-    console.log("first")
+  LoginUser(values:any){
+    console.log(values)
   }
 }

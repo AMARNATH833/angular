@@ -15,9 +15,11 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateDrivenFormComponent } from './templateDrivenForm/templateDrivenForm.component';
 import { JsonserverComponent } from './jsonserver/jsonserver.component';
+import { SvgComponent } from './svg/svg.component';
+import { EncapsulationComponent } from './encapsulation/encapsulation.component';
 
 @NgModule({
-  declarations: [											
+  declarations: [													
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -29,7 +31,9 @@ import { JsonserverComponent } from './jsonserver/jsonserver.component';
       ThreeRouteComponent,
       FormsComponent,
       TemplateDrivenFormComponent,
-      JsonserverComponent
+      JsonserverComponent,
+      SvgComponent,
+      EncapsulationComponent
    ],
   imports: [
     BrowserModule,

@@ -1,25 +1,29 @@
-<form #templateforms="ngForm">
+<form #templateforms="ngForm" (ngSubmit)="LoginUser(templateforms.value)">
   <h1>Template Driven Forms :)</h1>
 
   <div>
     <label>Name:</label>
-    <input type="text" ngModel name="username">
+    <input type="text" ngModel name="username" #name="ngModel" required minlength="2"><br>
+    <span *ngIf="name.invalid && name.touched" style="color: red;">Please enter a valid input!</span>
   </div>
 
   <div>
     <label>Password:</label>
-    <input type="password" ngModel name="password">
+    <input type="password" ngModel name="password" required #password="ngModel" minlength="3"><br>
+    <span *ngIf="password.invalid &&  password.touched" style="color: red;">Please Enter a valid password!</span>
   </div>
 
   <div>
     <label>EmailID:</label>
-    <input type="email" ngModel name="mail">
+    <input type="email" ngModel name="mail" required #email="ngModel"><br>
+    <span *ngIf="email.invalid &&  email.touched" style="color: red;">Please Enter a email password!</span>
   </div>
 
   <div>
     <label>Note:</label>
-    <input type="text" ngModel name="note"> 
+    <input type="text" ngModel name="note" required #text="ngModel"><br>
+    <span *ngIf="text.invalid &&  text.touched" style="color: red;">Please Enter a Note password!</span> 
   </div>
 
-  <button type="submit" (click)="submitForm()">SUBMIT</button>
+  <button type="submit">SUBMIT</button>
 </form>
