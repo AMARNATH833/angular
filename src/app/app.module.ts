@@ -17,9 +17,10 @@ import { TemplateDrivenFormComponent } from './templateDrivenForm/templateDriven
 import { JsonserverComponent } from './jsonserver/jsonserver.component';
 import { SvgComponent } from './svg/svg.component';
 import { EncapsulationComponent } from './encapsulation/encapsulation.component';
+import { InternationalizationComponent } from './internationalization/internationalization.component';
 
 @NgModule({
-  declarations: [													
+  declarations: [														
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -33,7 +34,8 @@ import { EncapsulationComponent } from './encapsulation/encapsulation.component'
       TemplateDrivenFormComponent,
       JsonserverComponent,
       SvgComponent,
-      EncapsulationComponent
+      EncapsulationComponent,
+      InternationalizationComponent
    ],
   imports: [
     BrowserModule,
