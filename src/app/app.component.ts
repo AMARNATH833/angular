@@ -9,6 +9,16 @@ import { PrimeCalculator } from './app.prime';
 })
 export class AppComponent {
   title = 'Angular.io';
+  
+  hooksArray:string[]=[];
+  constructor(){
+    // this.hooksArray.push({'name':'amar'})
+  }
+
+  onDestroy(){
+    this.hooksArray.splice(0,1);
+  }
+
   collector={
     Firstname:"Amar",
     Lastname:"Nath"

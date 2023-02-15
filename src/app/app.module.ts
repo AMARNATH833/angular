@@ -18,9 +18,10 @@ import { JsonserverComponent } from './jsonserver/jsonserver.component';
 import { SvgComponent } from './svg/svg.component';
 import { EncapsulationComponent } from './encapsulation/encapsulation.component';
 import { InternationalizationComponent } from './internationalization/internationalization.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
-  declarations: [														
+  declarations: [															
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -35,7 +36,8 @@ import { InternationalizationComponent } from './internationalization/internatio
       JsonserverComponent,
       SvgComponent,
       EncapsulationComponent,
-      InternationalizationComponent
+      InternationalizationComponent,
+      LifecycleComponent
    ],
   imports: [
     BrowserModule,
