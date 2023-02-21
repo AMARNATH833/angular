@@ -19,6 +19,7 @@ import { SvgComponent } from './svg/svg.component';
 import { EncapsulationComponent } from './encapsulation/encapsulation.component';
 import { InternationalizationComponent } from './internationalization/internationalization.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import {HttpClient} from '@angular/common/http'
 
 @NgModule({
   declarations: [															

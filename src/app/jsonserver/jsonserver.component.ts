@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-jsonserver',
@@ -7,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JsonserverComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   url:string="http://localhost:3000/posts";
 
   getValue(){
-    const website=this.url;
-    console.log(website)
+    return this.http.get(this.url);
   }
   ngOnInit() {
   }
