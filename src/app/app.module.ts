@@ -20,9 +20,10 @@ import { EncapsulationComponent } from './encapsulation/encapsulation.component'
 import { InternationalizationComponent } from './internationalization/internationalization.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import {HttpClient} from '@angular/common/http'
+import { DependencyComponent } from './dependency/dependency.component';
 
 @NgModule({
-  declarations: [															
+  declarations: [																
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -38,7 +39,8 @@ import {HttpClient} from '@angular/common/http'
       SvgComponent,
       EncapsulationComponent,
       InternationalizationComponent,
-      LifecycleComponent
+      LifecycleComponent,
+      DependencyComponent
    ],
   imports: [
     BrowserModule,
