@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { JsonserverComponent } from './jsonserver.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('JsonserverComponent', () => {
   let component: JsonserverComponent;
@@ -11,7 +12,8 @@ describe('JsonserverComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JsonserverComponent ]
+      declarations: [ JsonserverComponent ],
+      providers:[HttpClient,HttpHandler]
     })
     .compileComponents();
   }));

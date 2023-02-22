@@ -8,7 +8,7 @@ import { PrimeCalculator } from './app.prime';
   encapsulation:ViewEncapsulation.Emulated
 })
 export class AppComponent {
-  title = 'Angular.io';
+  title = 'angular';
   
   hooksArray:string[]=[];
   constructor(){
