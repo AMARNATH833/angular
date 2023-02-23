@@ -30,7 +30,7 @@
 
   <div class="cpass">
     <label>Conform Password:</label>
-    <input type="password" formControlName="cpassword" [disabled]=true value="Amar">
+    <input type="password" formControlName="cpassword"  value="Amar">
     <div *ngIf="submitted&&form['cpassword'].errors">
       <p *ngIf="form['cpassword'].errors['required']">please enter Conform Password</p>
       <p *ngIf="form['cpassword'].errors['cpassword']">Please enter valid Conform Password</p>

@@ -23,7 +23,7 @@ import {HttpClient} from '@angular/common/http'
 import { DependencyComponent } from './dependency/dependency.component';
 
 @NgModule({
-  declarations: [																
+  declarations: [																	
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -40,7 +40,8 @@ import { DependencyComponent } from './dependency/dependency.component';
       EncapsulationComponent,
       InternationalizationComponent,
       LifecycleComponent,
-      DependencyComponent
+      DependencyComponent,
+      TemplateDrivenFormComponent
    ],
   imports: [
     BrowserModule,
