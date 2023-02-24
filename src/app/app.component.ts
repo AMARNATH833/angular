@@ -11,6 +11,7 @@ export class AppComponent {
   title = 'angular';
   
   hooksArray:string[]=[];
+  enterValue: any;
   constructor(){
     // this.hooksArray.push({'name':'amar'})
   }

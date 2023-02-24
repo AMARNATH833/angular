@@ -21,9 +21,12 @@ import { InternationalizationComponent } from './internationalization/internatio
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import {HttpClient} from '@angular/common/http'
 import { DependencyComponent } from './dependency/dependency.component';
+import { TemplateURLComponent } from './templateURL/templateURL.component';
+import { OnChangesComponent } from './onChanges/onChanges.component';
+import { ProjectionComponent } from './projection/projection.component';
 
 @NgModule({
-  declarations: [																	
+  declarations: [																				
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -41,7 +44,10 @@ import { DependencyComponent } from './dependency/dependency.component';
       InternationalizationComponent,
       LifecycleComponent,
       DependencyComponent,
-      TemplateDrivenFormComponent
+      TemplateDrivenFormComponent,
+      TemplateURLComponent,
+      OnChangesComponent,
+      ProjectionComponent
    ],
   imports: [
     BrowserModule,
