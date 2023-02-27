@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, FormRecord, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -11,9 +11,11 @@ export class FormsComponent implements OnInit {
   title='Reactive Forms';
   FormDemo!: FormGroup;
   submitted: boolean | undefined;
+  public formz=new FormGroup({});
+  personForm:FormGroup=this.fb.group({});
+  
 
-  constructor(private fb:FormBuilder){
-
+  constructor(private fb:FormBuilder){ 
   }
 
   ngOnInit() {
@@ -23,7 +25,9 @@ export class FormsComponent implements OnInit {
       password:['',[Validators.required]],
       cpassword:['',[Validators.required]]
     });
+    this.formz.disable();
   }
+
   get form(){
     return this.FormDemo.controls;
   }
@@ -38,6 +42,59 @@ export class FormsComponent implements OnInit {
     console.log("PASSWORD:"+this.form['password'].value)
     console.log("CONFORM-PASSWORD:"+this.form['cpassword'].value)
   }
-  
+
+  setValue():void{
+    try{
+      this.FormDemo.setValue({
+        name:"abcdefghi",
+        mail:"dssd@gmail.com",
+        password:"asdfgh",
+        cpassword:"asdfgh",
+        nationality:"Indian"
+      })
+    }
+    catch(e){
+      console.warn(e);
+    }
+  }
+
+  patchValue():void{
+    this.FormDemo.patchValue({
+      name:"Amarnath",
+      email:"amar@gmail.com",
+      password:"amar@A!123",
+      cpassword:"amar@A!123"
+    })
+  }
+
+  // add(){
+  //   this.isIndian.valueChanges.subscribe(res=>{
+  //     if(res==='false'){
+  //       this.personForm.add
+  //     }
+  //   })
+  // }
+
+  // addControl(){
+  //   this.formz.addControl('test',new FormControl('India'));
+  // }
+
+  removeControl(nationality:string):void{
+    this.FormDemo.removeControl('nationality')
+  }
+
+  contains(name:string){
+    const answer=this.FormDemo.contains('name')
+    console.log(answer)
+    if(answer==true){
+      console.log("name")
+    }
+  }
+
+  reset(){
+    this.FormDemo.reset();
+    // console.log("success")
+  }
+
 
 }

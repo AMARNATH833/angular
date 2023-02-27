@@ -24,9 +24,11 @@ import { DependencyComponent } from './dependency/dependency.component';
 import { TemplateURLComponent } from './templateURL/templateURL.component';
 import { OnChangesComponent } from './onChanges/onChanges.component';
 import { ProjectionComponent } from './projection/projection.component';
+import { FormFunctionComponent } from './formFunction/formFunction.component';
+import { RoutingComponent } from './Routing/Routing.component';
 
 @NgModule({
-  declarations: [																				
+  declarations: [																						
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -47,7 +49,9 @@ import { ProjectionComponent } from './projection/projection.component';
       TemplateDrivenFormComponent,
       TemplateURLComponent,
       OnChangesComponent,
-      ProjectionComponent
+      ProjectionComponent,
+      FormFunctionComponent,
+      RoutingComponent
    ],
   imports: [
     BrowserModule,

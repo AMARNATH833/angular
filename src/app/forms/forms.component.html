@@ -37,10 +37,41 @@
     </div>
   </div><br>
 
-  <button type="button" class="button" (click)="submitForm()">SUBMIT</button>
-  
+  <button type="button" class="button" (click)="submitForm()" [disabled]="!FormDemo.valid">SUBMIT</button>
+
+  <!-- 'SetValue' button can be used as reset button in the forms -->
+  <button type="button" (click)="setValue()">SETvALUE</button>
+
+  <!-- 'patchValue' button  -->
+  <button type="button" (click)="patchValue()">PATCHvALUE</button>
+
+  <!-- 'Remove Control' button -->
+  <button type="button" (click)="removeControl('name')">RemoveControl</button>
+
+  <!-- 'Contains' button -->
+  <button type="button" (click)="contains('name')">Contains</button>
+
+  <!-- 'Reset' Button -->
+  <button type="button" (click)="reset()">Reset</button>
+
+  <!-- 'AddControl' Butteon 
+  <div [formGroup]="formz">
+    Disabled:{{formz.disabled}}
+    <div *ngIf="!formz.controls.test">
+      <button (click)="addControl()">AddControl</button>
+    </div>
+    <input *ngIf="formz.controls.test" formControlName="test" style="display:block ;">
+  </div> -->
+
+  <!-- Status of the Form is used! -->
   <p>Form Status : {{FormDemo.status}}</p><br>
   <p>Form Values : {{FormDemo.value|json}}</p>
   <p>Form Value using getRawValue : {{this.FormDemo.getRawValue()|json}}</p>
   
 </form>
+
+<hr>
+<p>Replacing a form control value</p><br>
+
+<!-- <label for="name">Name:</label>
+<input id="name" type="text" [formcontrol]="name"> -->
