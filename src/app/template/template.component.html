@@ -50,7 +50,7 @@ Date Pipe with Lower Case: {{todayDate|lowercase}}<br>
 Date Pipe with date pipe :{{todayDate|date:'medium'}}<br>
 Name:{{DataName}}<br>
 Name with slice :{{DataName|slice:5}}<br>
-<p>Currency Pipe :</p>
+<u><strong><p>Currency Pipe :</p></strong></u>
 Currency Pipe:{{Money|currency:'JPY'}}<br>
 Currency Pipe with symbol:{{Money|currency:'INR':'symbol'}}<br>
 Percentage:{{percent|percent}}<br>
@@ -59,3 +59,20 @@ Decimal pipe:{{decimal|number}}<br>
 Decimal pipe with conditions :{{decimal|number:'4.3-5'}}<br>
 Decimal pipe with Rounding number  {{decimal}} to their Nearest:{{decimal|number:'1.1-1'}}<br>
 <br>
+<hr>
+<!-- Example of Template Variables  -->
+<u><strong><p>Template Variables example: </p></strong></u>
+<input #phone placeholder="phone number">
+<button type="button" (click)="call(phone.value)">CALL</button><br>
+
+<p>Reference Variable , forms and ngForm</p>
+<div>
+    <u><strong><h4>Template reference variable with disabled button :</h4></strong></u>
+    <button
+      type="button"
+      #btn
+      disabled
+      [innerHTML]="'disabled by attribute: ' + btn.disabled"
+    ></button>
+  </div>
+<hr>

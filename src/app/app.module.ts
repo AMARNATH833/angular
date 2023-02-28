@@ -26,9 +26,10 @@ import { OnChangesComponent } from './onChanges/onChanges.component';
 import { ProjectionComponent } from './projection/projection.component';
 import { FormFunctionComponent } from './formFunction/formFunction.component';
 import { RoutingComponent } from './Routing/Routing.component';
+import { ComponentStylingComponent } from './componentStyling/componentStyling.component';
 
 @NgModule({
-  declarations: [																						
+  declarations: [																							
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -51,7 +52,8 @@ import { RoutingComponent } from './Routing/Routing.component';
       OnChangesComponent,
       ProjectionComponent,
       FormFunctionComponent,
-      RoutingComponent
+      RoutingComponent,
+      ComponentStylingComponent
    ],
   imports: [
     BrowserModule,

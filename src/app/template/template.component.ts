@@ -7,6 +7,7 @@ import { CalenderService } from '../calender.service';
   styleUrls: ['./template.component.css']
 })
 export class TemplateComponent{
+  
   values:any;
   mobile:any;
   word:string="AmarNath";
@@ -45,6 +46,10 @@ export class TemplateComponent{
   ngOnInit():void{
     this.todayDate=new Date().toDateString();
     this.DataName="VivoV20 SMARTPHONE";
+  }
+
+  call(value:string){
+    console.log(`Calling ${value} ...`);
   }
 
 }
