@@ -27,9 +27,15 @@ import { ProjectionComponent } from './projection/projection.component';
 import { FormFunctionComponent } from './formFunction/formFunction.component';
 import { RoutingComponent } from './Routing/Routing.component';
 import { ComponentStylingComponent } from './componentStyling/componentStyling.component';
+import { InputbindingParentComponent } from './inputbinding-parent/inputbinding-parent.component';
+import { InputbindingChildComponent } from './inputbinding-child/inputbinding-child.component';
+import { SetterParentComponent } from './setter-parent/setter-parent.component';
+import { SetterChildComponent } from './setter-child/setter-child.component';
+import { VersionParentComponent } from './versionParent/versionParent.component';
+import { VersionChildComponent } from './versionChild/versionChild.component';
 
 @NgModule({
-  declarations: [																							
+  declarations: [																														
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -53,7 +59,13 @@ import { ComponentStylingComponent } from './componentStyling/componentStyling.c
       ProjectionComponent,
       FormFunctionComponent,
       RoutingComponent,
-      ComponentStylingComponent
+      ComponentStylingComponent,
+      InputbindingParentComponent,
+      InputbindingChildComponent,
+      SetterParentComponent,
+      SetterChildComponent,
+      VersionParentComponent,
+      VersionChildComponent
    ],
   imports: [
     BrowserModule,

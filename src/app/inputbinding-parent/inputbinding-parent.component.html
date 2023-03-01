@@ -1,0 +1,8 @@
+<!-- Example of Data pass from Parent to Child using Input Binding -->
+<h2>{{role}} has {{names.length}} main Pillors of the project.</h2>
+
+<app-inputbinding-child 
+*ngFor="let name of names"
+    [name]="name"
+    [role]="Developer">
+</app-inputbinding-child>

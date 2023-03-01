@@ -1,0 +1,5 @@
+<h2>SuperHero haves {{names.length}} Powers</h2>
+<app-setter-child
+  *ngFor="let name of names"
+  [name]="name">
+</app-setter-child>
