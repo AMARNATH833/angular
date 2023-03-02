@@ -33,9 +33,15 @@ import { SetterParentComponent } from './setter-parent/setter-parent.component';
 import { SetterChildComponent } from './setter-child/setter-child.component';
 import { VersionParentComponent } from './versionParent/versionParent.component';
 import { VersionChildComponent } from './versionChild/versionChild.component';
+import { VoterParentComponent } from './voterParent/voterParent.component';
+import { VoterChildrenComponent } from './voterChildren/voterChildren.component';
+import { LocalVariableParentComponent } from './localVariableParent/localVariableParent.component';
+import { LocalVariableChildrenComponent } from './localVariableChildren/localVariableChildren.component';
+import { DynamicComponentComponent } from './dynamicComponent/dynamicComponent.component';
+import { DynamicParentComponent } from './dynamicParent/dynamicParent.component';
 
 @NgModule({
-  declarations: [																														
+  declarations: [																																				
     AppComponent,
       ProductComponent,
       TemplateComponent,
@@ -65,7 +71,13 @@ import { VersionChildComponent } from './versionChild/versionChild.component';
       SetterParentComponent,
       SetterChildComponent,
       VersionParentComponent,
-      VersionChildComponent
+      VersionChildComponent,
+      VoterParentComponent,
+      VoterChildrenComponent,
+      LocalVariableParentComponent,
+      LocalVariableChildrenComponent,
+      DynamicComponentComponent,
+      DynamicParentComponent
    ],
   imports: [
     BrowserModule,

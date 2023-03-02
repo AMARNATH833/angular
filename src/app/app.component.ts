@@ -39,7 +39,7 @@ export class AppComponent {
       worker.postMessage(10000);
     }
     else{
-      
+      //return error...
     }
   }
 

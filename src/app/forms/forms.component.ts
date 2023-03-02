@@ -67,6 +67,11 @@ export class FormsComponent implements OnInit {
     })
   }
 
+  // nullablity(){
+  //   const email=new FormControl<string|null>(null)
+  //   email.setValue('amar@angular.iov')
+  // }
+
   // add(){
   //   this.isIndian.valueChanges.subscribe(res=>{
   //     if(res==='false'){

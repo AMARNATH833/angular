@@ -1,18 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-templateDrivenForm',
   templateUrl: './templateDrivenForm.component.html',
   styleUrls: ['./templateDrivenForm.component.css']
 })
-export class TemplateDrivenFormComponent implements OnInit {
+export class TemplateDrivenFormComponent{
 
   constructor() { }
-
-  ngOnInit() {
-  }
   
-  LoginUser(values:any){
+  LoginUser(values:string){
     console.log(values)
   }
 }

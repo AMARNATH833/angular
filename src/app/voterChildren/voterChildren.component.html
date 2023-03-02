@@ -1,0 +1,8 @@
+<h1>Election for various of the office</h1>
+<h3>Agree : {{agreed}}  DisAgree : {{disagreed}}</h3>
+
+<app-voterParent
+  *ngFor="let voter of voters"
+  [name]="voter"
+  (voted)="onVoted($event)">
+</app-voterParent>
