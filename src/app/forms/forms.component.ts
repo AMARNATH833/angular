@@ -10,7 +10,7 @@ export class FormsComponent implements OnInit {
 
   title='Reactive Forms';
   FormDemo!: FormGroup;
-  submitted: boolean | undefined;
+  submitted!: boolean ;
   public formz=new FormGroup({});
   personForm:FormGroup=this.fb.group({});
   

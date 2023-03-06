@@ -8,7 +8,7 @@ import { User } from '../user';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent{
-message: any;
+  message!: string;
 
   constructor(private calender:CalenderService){}
 
@@ -25,9 +25,8 @@ message: any;
 
   day(){
     this.calender.todayDay();
-    // alert(this.calender.todayDay())
   }
-  log(message:any){
+  log(message:string){
     this.calender.log('Hello ');
   }
 }

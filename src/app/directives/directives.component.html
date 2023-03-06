@@ -7,7 +7,7 @@
 </p>
 
 <div>
-  <div *ngFor="let member of user" [ngClass]="{'test':member.userName === 'Amar'}">
+  <div *ngFor="let member of user" ngClass="{'test':member.userName === 'Amar'}">
     {{member.userName}}
   </div>
 </div><br>

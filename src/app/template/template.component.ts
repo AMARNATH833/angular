@@ -16,8 +16,8 @@ export class TemplateComponent{
   favColor="purple";
   FirstName:string="";
   LastName:string="";
-  todayDate:string|undefined;
-  DataName:string|undefined;
+  todayDate!:string;
+  DataName!:string;
   Money:number=69999;
   percent:number=0.99;
   decimal:number=1.25456789;

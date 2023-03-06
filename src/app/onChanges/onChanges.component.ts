@@ -7,8 +7,8 @@ import { Component,SimpleChanges,OnChanges, Input,OnInit, ViewChild } from '@ang
 })
 export class OnChangesComponent implements OnChanges {
 
-  previousValue:string|any;
-  currentValue:String|any;
+  previousValue!:string;
+  currentValue!:String;
   constructor() { }
 
   ngOnInit(){  
@@ -17,7 +17,7 @@ export class OnChangesComponent implements OnChanges {
     this.previousValue="Angular";  
   } 
 
-  @Input() simpleInput:string | undefined;
+  @Input() simpleInput!:string;
     
     
 

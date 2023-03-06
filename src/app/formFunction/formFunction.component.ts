@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -6,13 +6,10 @@ import { FormControl } from '@angular/forms';
   templateUrl: './formFunction.component.html',
   styleUrls: ['./formFunction.component.css']
 })
-export class FormFunctionComponent implements OnInit {
+export class FormFunctionComponent{
 
   name=new FormControl('');
   constructor() { }
-
-  ngOnInit() {
-  }
 
   update(){
     this.name.setValue('AmarNath')

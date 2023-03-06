@@ -10,7 +10,7 @@ export class InputbindingParentComponent{
 
   names=NAMES;
   role='Developer';
-  Developer: string | any;
+  Developer!: string;
 
   constructor() { }
 

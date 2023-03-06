@@ -26,7 +26,6 @@ import { OnChangesComponent } from './onChanges/onChanges.component';
 import { ProjectionComponent } from './projection/projection.component';
 import { FormFunctionComponent } from './formFunction/formFunction.component';
 import { RoutingComponent } from './Routing/Routing.component';
-import { ComponentStylingComponent } from './componentStyling/componentStyling.component';
 import { InputbindingParentComponent } from './inputbinding-parent/inputbinding-parent.component';
 import { InputbindingChildComponent } from './inputbinding-child/inputbinding-child.component';
 import { SetterParentComponent } from './setter-parent/setter-parent.component';
@@ -37,8 +36,6 @@ import { VoterParentComponent } from './voterParent/voterParent.component';
 import { VoterChildrenComponent } from './voterChildren/voterChildren.component';
 import { LocalVariableParentComponent } from './localVariableParent/localVariableParent.component';
 import { LocalVariableChildrenComponent } from './localVariableChildren/localVariableChildren.component';
-import { DynamicComponentComponent } from './dynamicComponent/dynamicComponent.component';
-import { DynamicParentComponent } from './dynamicParent/dynamicParent.component';
 
 @NgModule({
   declarations: [																																				
@@ -65,7 +62,6 @@ import { DynamicParentComponent } from './dynamicParent/dynamicParent.component'
       ProjectionComponent,
       FormFunctionComponent,
       RoutingComponent,
-      ComponentStylingComponent,
       InputbindingParentComponent,
       InputbindingChildComponent,
       SetterParentComponent,
@@ -75,9 +71,7 @@ import { DynamicParentComponent } from './dynamicParent/dynamicParent.component'
       VoterParentComponent,
       VoterChildrenComponent,
       LocalVariableParentComponent,
-      LocalVariableChildrenComponent,
-      DynamicComponentComponent,
-      DynamicParentComponent
+      LocalVariableChildrenComponent
    ],
   imports: [
     BrowserModule,

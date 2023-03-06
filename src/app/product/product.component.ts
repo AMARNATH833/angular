@@ -9,7 +9,7 @@ export class ProductComponent{
 
   message="Hello , this is Amar! Lets be friends!";
   canEdit=false;
-  noEdit:null | undefined;
+  noEdit!:null;
 
   products=[{
     name:"Ipphone",
